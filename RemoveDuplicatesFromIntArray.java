@@ -17,8 +17,8 @@
  * 		2) Compile the program using the command line syntax: 
  * 			> set path=%path%;C:\Program Files\Java\jdk1.8.0_102\bin
  * 			> javac RemoveDuplicatesFromIntArray.java
- *  	3) Run the program using the syntax from the command line:
- *  		> java RemoveDuplicatesFromIntArray
+ *  		3) Run the program using the syntax from the command line:
+ *  			> java RemoveDuplicatesFromIntArray
  * This has been tested as working on Windows 10 via the command prompt.  
  * 
  * Revision History:
@@ -120,10 +120,10 @@ public class RemoveDuplicatesFromIntArray {
 			}
 
 			// If the unique boolean is still true, increment the uniqueElements count.
-	        if (unique){ 
-	        	uniqueElements++;
-	        }
-	     }  
+	        	if (unique){ 
+	        		uniqueElements++;
+	        	}
+	     	}  
 		
 		// For debugging:
 		// System.out.println("Number of unique elements found: " + uniqueElements);
@@ -134,30 +134,30 @@ public class RemoveDuplicatesFromIntArray {
 		 * This new Integer array will eventually be populated with the unique elements and
 		 * returned back as the result array.  
 		 */
-	     int[] arrayResult = new int[uniqueElements];
-	     int n = 0;  // The new result array starting index value.
+	     	int[] arrayResult = new int[uniqueElements];
+	     	int n = 0;  // The new result array starting index value.
 
-	     /*
-	      * Iterate through the input array, adding the unique elements to it.  
-	      */
-	     for (int i = 0; i < arrayIn.length; i++) { // Iterate through the input array.
+	     	/*
+	      	* Iterate through the input array, adding the unique elements to it.  
+	      	*/
+	     	for (int i = 0; i < arrayIn.length; i++) { // Iterate through the input array.
 
-	    	 unique = true;   // Set the unique boolean to true for each iteration of the input array.  
+	    	 	unique = true;   // Set the unique boolean to true for each iteration of the input array.  
 		          
-	    	 for (int j = 0; j < arrayDup.length; j++) { // Iterate through the duplicate array.
+	    	 	for (int j = 0; j < arrayDup.length; j++) { // Iterate through the duplicate array.
 
-	    		 if ( (arrayIn[i] == arrayDup[j]) && (i != j) ) { // Duplicate element detected.
-	    			 unique = false;   // Found an element in the input array that is not unique.
-	    		 }
-	    	 }
+	    		 	if ( (arrayIn[i] == arrayDup[j]) && (i != j) ) { // Duplicate element detected.
+	    				unique = false;   // Found an element in the input array that is not unique.
+	    		 	}
+	    	 	}
 	    	 
-	    	 // If the unique boolean is still true, assign the element to the result array.
-	    	 if (unique){ 
-	    		 arrayResult[n] = arrayIn[i];
-	    		 n++;  // Increment the result array index number.
-	    	 }
-	     }
-		 return arrayResult; // Return the result array back to the user.
+	    	 	// If the unique boolean is still true, assign the element to the result array.
+	    	 	if (unique){ 
+	    		 	arrayResult[n] = arrayIn[i];
+	    		 	n++;  // Increment the result array index number.
+	    	 	}
+	     	}
+		return arrayResult; // Return the result array back to the user.
 	} // End method.
 
 } // End class.
